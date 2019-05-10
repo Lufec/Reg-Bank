@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity muxW is
+	port(key: in std_logic_vector(2 downto 0);
+		  S_out: out std_logic_vector(7 downto 0));
+end muxW;
+
+architecture choice of muxW is
+begin 
+	S_out(0)<=not key(2) and not key (1) and not key(0);
+	S_out(1)<=not key(2) and not key (1) and key(0);
+	S_out(2)<=not key(2) and key (1) and not key(0);
+	S_out(3)<=not key(2) and key (1) and key(0);
+	S_out(4)<=key(2) and not key (1) and not key(0);
+	S_out(5)<=key(2) and not key (1) and key(0);
+	S_out(6)<=key(2) and key (1) and not key(0);
+	S_out(7)<=key(2) and key (1) and key(0);
+end choice;

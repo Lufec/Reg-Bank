@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity demuxR is
+	port(S_in: in std_logic_vector(7 downto 0);
+		  R: in std_logic;
+		  key: in std_logic_vector(2 downto 0);
+		  C_out: out std_logic_vector(4 downto 0));
+end demuxR;
+
+architecture choice of DemuxR is
+begin
+	gen: for i in 4 downto 0 generate
+		C_out(i)<= R and((not key(2) and((not key(1) and ((not key(0) and S_in(0)) or (key(0) and S_in(1))))
+													or (key(1) and ((not key(0) and S_in(2)) or (key(0) and S_in(3))))))
+							   or  key(2) and((not key(1) and ((not key(0) and S_in(4)) or (key(0) and S_in(5))))
+								               or (key(1) and ((not key(0) and S_in(6)) or (key(0) and S_in(7))))));
+	end generate;
+end choice;
