@@ -62,8 +62,47 @@ set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
 set_global_assignment -name VHDL_FILE Vhdl6.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/altera/13.0sp1/Waveform2.vwf"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_location_assignment PIN_U9 -to disp[6]
+set_location_assignment PIN_U1 -to disp[5]
+set_location_assignment PIN_U2 -to disp[4]
+set_location_assignment PIN_T4 -to disp[3]
+set_location_assignment PIN_R7 -to disp[2]
+set_location_assignment PIN_R6 -to disp[1]
+set_location_assignment PIN_T3 -to disp[0]
+set_location_assignment PIN_V2 -to ent[3]
+set_location_assignment PIN_V1 -to ent[2]
+set_location_assignment PIN_U4 -to ent[1]
+set_location_assignment PIN_U3 -to ent[0]
+set_location_assignment PIN_B13 -to keyR[2]
+set_location_assignment PIN_C13 -to keyR[1]
+set_location_assignment PIN_AC13 -to keyR[0]
+set_location_assignment PIN_P2 -to keyW[2]
+set_location_assignment PIN_P1 -to keyW[1]
+set_location_assignment PIN_N1 -to keyW[0]
+set_location_assignment PIN_N26 -to R
+set_location_assignment PIN_AF14 -to W
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_location_assignment PIN_Y18 -to led_R[7]
+set_location_assignment PIN_AA20 -to led_R[6]
+set_location_assignment PIN_U17 -to led_R[5]
+set_location_assignment PIN_U18 -to led_R[4]
+set_location_assignment PIN_V18 -to led_R[3]
+set_location_assignment PIN_W19 -to led_R[2]
+set_location_assignment PIN_AF22 -to led_R[1]
+set_location_assignment PIN_AE22 -to led_R[0]
+set_location_assignment PIN_AC21 -to led_W[7]
+set_location_assignment PIN_AD21 -to led_W[6]
+set_location_assignment PIN_AD23 -to led_W[5]
+set_location_assignment PIN_AD22 -to led_W[4]
+set_location_assignment PIN_AC22 -to led_W[3]
+set_location_assignment PIN_AB21 -to led_W[2]
+set_location_assignment PIN_AF23 -to led_W[1]
+set_location_assignment PIN_AE23 -to led_W[0]
+set_location_assignment PIN_G26 -to reset
+set_location_assignment PIN_D13 -to clk
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/lu_fe/Downloads/Mensagem_Sem_Título (2)/Waveform3.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

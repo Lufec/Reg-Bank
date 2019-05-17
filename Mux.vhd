@@ -16,4 +16,5 @@ begin
 	S_out(5)<=W and key(2) and not key (1) and key(0);
 	S_out(6)<=W and key(2) and key (1) and not key(0);
 	S_out(7)<=W and key(2) and key (1) and key(0);
+	
 end choice;
